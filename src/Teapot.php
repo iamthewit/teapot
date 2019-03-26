@@ -70,11 +70,6 @@ class Teapot
      */
     public function fill(Volume $fillVolume)
     {
-        if ($fillVolume->toNativeUnit() > $this->capacity) {
-            $m = 'You can not fill the teapot with more liquid than it\'s total capacity.';
-            throw new InvalidFillVolumeException($m);
-        }
-
         if ($this->volume->add($fillVolume)->toNativeUnit() > $this->capacity->toNativeUnit()) {
             $m = 'You are trying to fill the teapot with more liquid than it can currently hold.';
             throw new InvalidFillVolumeException($m);
