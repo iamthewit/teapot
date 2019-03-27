@@ -98,12 +98,3 @@ class Teapot
         $this->volume = $this->volume->subtract($pourVolume);
     }
 }
-
-
-/**
- * Ideas:
- *
- * Maybe the namespace could be Beverage?
- *  - Beverage/Teapot
- *  - Beverage/Mug
- */
